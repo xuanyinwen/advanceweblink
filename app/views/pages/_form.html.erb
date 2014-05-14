@@ -1,0 +1,3 @@
+  <%= f.label :data, "Edit your <strong>#{@page.title || @page.name.gsub('-', ' ')}</strong> Page" %>
+  <br /><br />
+  <%= f.text_area :data, :cols => 80, :rows => 40, :class => "mceEditor" %>

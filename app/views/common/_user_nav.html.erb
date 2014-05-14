@@ -1,0 +1,4 @@
+<% if current_user %>
+  <%= yield :sidebar -%>
+  <strong><%= link_to 'logout', logout_path %></strong>
+<% end %>

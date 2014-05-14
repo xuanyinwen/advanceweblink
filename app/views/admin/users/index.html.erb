@@ -1,0 +1,12 @@
+<h2>User Admin</h2>
+<div>
+  <% @users.each do |user| %>
+    <p>
+      <%= link_to user.name, admin_user_path(user) -%>
+    </p>
+  <% end %>
+</div>
+
+<div>
+  [ <%= link_to 'new', new_admin_user_path %>]
+</div>

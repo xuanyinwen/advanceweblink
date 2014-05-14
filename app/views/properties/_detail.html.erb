@@ -1,0 +1,136 @@
+
+<table width="700" border="0" align="center" cellspacing="0" cellpadding="5">
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr>
+    <td width="67%">
+      <div align="left"><font face="Arial, Helvetica, sans-serif"><b><font color="#333333">Property
+              for Sale:<font color="#002E63"> </font></font><font color="#002E63" size="2" face="Arial, Helvetica, sans-serif"><b><strong><%= property.suburb -%></strong></b></font><font face="Arial, Helvetica, sans-serif" size="2"><b> </b></font></b><font face="Arial, Helvetica, sans-serif" size="2"><font face="Arial, Helvetica, sans-serif"><%= property.street_no + ' ' + property.street-%></font></font></font></div></td>
+    <td width="33%"><div align="right"><font size="2" color="#0000AA" face="Arial, Helvetica, sans-serif"><b><font color="#6482A0">REF: <%= property.ref -%></font></b></font></div></td>
+  </tr>
+  <tr>
+    <td height="29" colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font color="#6482A0" face="Arial, Helvetica, sans-serif"><%= property.advert_heading %></font></b></font><font color="#000079"><b></b></font>      <div align="right">    </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="left"><font face="Arial, Helvetica, sans-serif"><font size="2" color="#000000"><%= property.advert_text -%></font></font></div></td>
+  </tr>
+  <tr>
+    <td><font color="#000079" face="Georgia, Times New Roman, Times, serif" size="3"><b><font color="#002E63" size="4" face="Arial, Helvetica, sans-serif"><b><%= property.display_price -%></b></font></b></font></td>
+    <td><div align="right"><font color="#333333" size="2" face="Arial, Helvetica, sans-serif"><strong>Bathrooms: <%= property.bathrooms -%>, Garaging: <%= property.garaging -%></strong></font><font color="#003399" size="2" face="Arial, Helvetica, sans-serif"></font></div></td>
+  </tr>
+  <tr>
+    <td height="15"><font color="#000079"><b><font face="Arial, Helvetica, sans-serif"><font color="#000099" size="1" face="Arial, Helvetica, sans-serif"><b><font color="#333333" size="2">Open
+                  Home: </font></b></font></font></b><font face="Arial, Helvetica, sans-serif"><font color="#000099" size="1" face="Arial, Helvetica, sans-serif"><font color="#333333" size="2">Contact Agent</font></font><font color="#333333" size="2"> </font></font></font></td>
+    <td><div align="right"><font color="#003399" face="Arial, Helvetica, sans-serif"><strong><font color="#002E63" size="2">Bedrooms: <%= property.bedrooms -%></font></strong></font><font face="Arial, Helvetica, sans-serif" size="2" color="#002E63"> </font></div></td>
+  </tr>
+  <tr>
+    <td height="15"><font color="#333333" size="2" face="Arial, Helvetica, sans-serif"><strong>Rateable Value: <%= property.gv -%>, Land Area: <%= property.land_area_sqm -%>M2</strong></font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="7"><font size="2" face="Arial, Helvetica, sans-serif"><a href="/cgi-bin/genpage?whoami=6021&template=mortgage.html&ref=JO2647">Mortgage Calculator &gt;&gt;</a></font></td>
+    <td><div align="right"><font face="Arial, Helvetica, sans-serif" size="2" color="#000000"><a href="mailto:?Subject=Have%20a%20look%20at%20this%20Property&body=Hi!%20I%20thought%20you%20may%20be%20interested%20in%20the%20following%20Property:%0A%0A%20http://openhomesnz.com/cgi-bin/genpage?whoami=6021%26template=sp5detail.htm%26ref=JO2647"><img src="http://www.salespartner.co.nz/agents/webimages/email.gif" width="16" height="16" border="0" align="absmiddle"></a> <font size="2" face="Arial, Helvetica, sans-serif"><a href="mailto:?Subject=Have%20a%20look%20at%20this%20Property&body=Hi!%20I%20thought%20you%20may%20be%20interested%20in%20the%20following%20Property:%0A%0A%20http://openhomesnz.com/cgi-bin/genpage?whoami=6021%26template=sp5detail.htm%26ref=JO2647">Email
+              this page to a friend</a></font></font></div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div align="center"><font size="2" color="#0000AA" face="Arial, Helvetica, sans-serif"><b></b></font></div>
+    </td>
+  </tr>
+</table>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="2">
+  <tr>
+    <td width="50%">
+      <div align="center"><font color="#000079"><b><font face="Arial, Helvetica, sans-serif"><font size="2"><br />
+              </font>                               </font></b></font></div>
+    </td>
+    <td>
+      <div align="center"><font color="#000079" face="Georgia, Times New Roman, Times, serif" size="3"><b><font color="000079" size="4" face="Arial, Helvetica, sans-serif"></font></b></font></div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" height="70">      <div align="center">
+        <p align="center"><%=  if property.images[0] then image_tag (property.images[0].image.url('320x200', :jpg)) end -%></p>
+        <p align="center">&nbsp;</p>
+      </div>
+    </td>
+    <td>
+      <p align="center"><font size="1" face="Verdana, Arial, Helvetica, Sans-Serif" color="#003399"><%= if property.images[1] then image_tag (property.images[1].image.url('320x200', :jpg)) end -%></font> </p>
+      <p align="center"><br />
+      </p></td>
+  </tr>
+  <tr>
+    <td width="50%" height="48">
+      <div align="center">
+        <p><font size="1" face="Verdana, Arial, Helvetica, Sans-Serif" color="#003399"><%= if property.images[2] then image_tag (property.images[2].image.url('320x200', :jpg)) end-%> </font></p>
+        <p>&nbsp;</p>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <p><font size="1" face="Verdana, Arial, Helvetica, Sans-Serif" color="#003399"><%= if property.images[3] then image_tag (property.images[3].image.url('320x200', :jpg)) end-%>
+          </font></p>
+        <p>&nbsp;</p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" height="272">
+      <div align="center"><font size="2" color="#0000AA" face="Verdana, Arial, Helvetica, Sans-Serif"><%= if property.images[4] then image_tag (property.images[4].image.url('320x200', :jpg)) end-%></font></div>
+    </td>
+    <td valign="middle"> <div align="center"><font size="2"><strong><font face="Arial, Helvetica, sans-serif"></font></strong></font><font face="Arial, Helvetica, sans-serif"><strong> </strong></font></div>
+      <div align="center"><font size="2" color="#0000AA" face="Verdana, Arial, Helvetica, Sans-Serif"><b>
+            <div id="map" style="width: 320px; height: 240px"></div>
+          </b></font>
+        <font size="2" face="Arial, Helvetica, sans-serif">
+          <br />
+          <strong>Map location not guaranteed</strong> </font> </div>
+    </td>
+  </tr>
+</table>
+<table width="700" border="0" bordercolor="#999999" bordercolordark="#999999" bordercolorlight="#999999" align="center" cellspacing="0" cellpadding="5">
+  <tr bgcolor="#FFFFFF">
+    <td height="29" colspan="3"><hr /></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td width="7%" height="102">
+      <div align="center">
+        <% if user.image %>
+          <%= image_tag user.image.url('75x100#') %>
+        <% end %>
+      </div>
+    </td>
+    <td width="52%" height="102" valign="middle">
+      <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#333333" size="2" face="Arial, Helvetica, sans-serif">For
+              more information please contact:</font><font size="+1" face="Arial, Helvetica, sans-serif"><br/>
+              <br/>
+              <%= user.name  %> </font></b><font face="Arial, Helvetica, sans-serif"><br/>
+            <font size="2"><%= user.company -%></font><br/>
+            <BR>
+            <font size="2">Work: <%= user.phone_work -%>, Mobile: <%= user.phone_mobile -%></font><strong><font size="2"><br/>
+                Email:</font></strong><font size="2"> </font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><b><a href="mailto:<%= user.email %> "><%= user.email %></a></b></font><font face="Arial, Helvetica, sans-serif"> </font></p>
+    </td>
+    <td width="41%"><div align="center"><b><font size="2" color="#0000AA" face="Verdana, Arial, Helvetica, Sans-Serif"><b><font size="2" color="#0000AA" face="Verdana, Arial, Helvetica, Sans-Serif"><b></b></font><font size="2" color="#0000AA" face="Verdana, Arial, Helvetica, Sans-Serif"><b><font size="2" color="#0000AA" face="Verdana, Arial, Helvetica, Sans-Serif"><b><img src="http://www.salespartner.co.nz/agents/harcourts.gif" width="207" height="80"></b></font></b></font></b></font></b></div></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td height="29" colspan="3"><hr /></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td height="47" colspan="3">&nbsp;</td>
+  </tr>
+</table>
+
+<p>
+  <% property.images.each do |image| %>
+    <%= link_to image_tag(image.image.url('120x90', :jpg)), user_property_image_path(user, :id => image, :property_id => property) %>
+  <% end %>
+</p>
+<p>
+  <%= link_to 'back', user_properties_path(user) %>
+</p>

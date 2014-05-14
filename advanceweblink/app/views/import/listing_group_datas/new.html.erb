@@ -1,0 +1,5 @@
+<% form_for @listing_group_data, :url => import_listing_group_datas_path(:guid => params[:guid]), :html => { :multipart => true } do |f| %>
+  <%= f.file_field :data %>
+  <br />
+  <%= f.submit "Upload" %>
+<% end %>

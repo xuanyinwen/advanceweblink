@@ -1,0 +1,29 @@
+<h2>User Admin: <%= @user.name -%></h2>
+
+<% if @user.image %>
+  <div>
+    <%= image_tag @user.image.url('100x100#') %>
+  </div>
+<% else %>
+ <i>no profile image</i>
+<% end %>
+
+<div>
+  <p><strong>Email:</strong> <%= @user.email %></p>
+</div>
+
+<div>
+  <p><strong>GUID:</strong> <%= @user.guid %></p>
+</div>
+
+<div>
+  <p><strong>Domain Name:</strong> <%= @user.domain_name %></p>
+</div>
+
+<div>
+  [ <%= link_to 'list', admin_users_path %> | 
+    <%= link_to 'new', new_admin_user_path %> | 
+    <%=  link_to 'edit', edit_admin_user_path(@user) -%> |  
+    <%=  link_to 'delete', admin_user_path(@user), :method => :delete, :confirm => 'Are you sure?' -%> ]
+</div>
+  

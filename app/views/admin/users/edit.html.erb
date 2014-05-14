@@ -1,0 +1,7 @@
+<h2>User Admin: Edit User</h2>
+
+<%- form_for @user, :url => admin_user_path(@user), :html => {:multipart => true} do |f| -%>
+  <%= f.error_messages %>
+  <%= render :partial => 'form', :locals => {:f => f} -%>
+  <%= f.submit "Save" %> <%= link_to 'cancel', admin_user_path(@user) %>
+<% end %>

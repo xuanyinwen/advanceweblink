@@ -1,0 +1,40 @@
+<p>
+  <%= form.label :name %><br />
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.label :email %><br />
+  <%= form.text_field :email %>
+</p>
+<p>
+  <%= form.label :phone_work %><br />
+  <%= form.text_field :phone_work %>
+</p>
+<p>
+  <%= form.label :phone_after_hours %><br />
+  <%= form.text_field :phone_after_hours %>
+</p>
+<p>
+  <%= form.label :phone_mobile %><br />
+  <%= form.text_field :phone_mobile %>
+</p>
+<p>
+  <%= form.label :phone_fax %><br />
+  <%= form.text_field :phone_fax %>
+</p>
+<p>
+  <%= form.label :company %><br />
+  <%= form.text_field :company %>
+</p>
+<p>
+  <%= form.label :tag_line %><br />
+  <%= form.text_field :tag_line %>
+</p>
+<p>
+  <%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
+  <%= form.password_field :password %>
+</p>
+<p>
+  <%= form.label :password_confirmation %><br />
+  <%= form.password_field :password_confirmation %>
+</p>

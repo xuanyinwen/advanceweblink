@@ -1,0 +1,12 @@
+<% content_for :sidebar do %>
+  <% if current_user && user == current_user %>
+    <strong><%= link_to 'Edit', page.new_record? ? new_user_page_path(current_user, :name => page.name) : edit_user_page_path(current_user, :id => page.name) %></strong> |
+  <% end %>
+<% end %>
+
+<% if page.data.include? '{{contact_form}}' %>
+  <% contact_form = render(:partial => 'contacts/new') %>
+  <%= page.data.sub('{{contact_form}}', contact_form) -%>
+<% else %>
+  <%= page.data -%>
+<% end %>

@@ -1,0 +1,9 @@
+<% @properties.each do |property| %>
+
+  <% if @user.theme && @user.theme.property_line_item %>
+    <%= render :inline => @user.theme.property_line_item, :locals => {:user => @user, :property => property} -%>
+  <% else %>
+    <%= render :partial => 'properties/line_item', :locals => {:user => @user, :property => property} %>
+  <% end %>
+
+<% end %>

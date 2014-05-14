@@ -1,0 +1,7 @@
+<% form_for @image, :url => api_create_import_images_path(@user.guid, @property.ref), :html => {:multipart => true, :method => :post} do |f| %>
+  <%= f.file_field :image %>
+  <br />
+  Position: <%= f.text_field :position %>
+  <br />
+  <%= f.submit "Upload" %>
+<% end %>

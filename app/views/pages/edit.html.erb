@@ -1,0 +1,5 @@
+<%- form_for @page, :url => user_page_path(current_user, :id => @page.name) do |f| -%>
+  <%= render :partial => 'form', :locals => {:f => f} -%>
+  <br />
+  <%= f.submit "Save" %> <%= link_to 'cancel', user_page_path(current_user, :id => @page.name) %>
+<% end %>

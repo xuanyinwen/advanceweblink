@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <%= javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag "http://andrewduncan.co.nz/mainstyle.css" %>
+
+<link rel="SHORTCUT ICON" href="http://andrewduncan.co.nz/Images/house.ico"/>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+
+
+</head>
+<body>
+
+  <div align="center">
+    <%= render :partial => 'common/user_nav' -%>
+    <table width="781" border="0" align="center" cellpadding="0" cellspacing="0" style="BORDER-RIGHT: #333333 1px solid; BORDER-LEFT: #333333 1px solid; BORDER-TOP: #333333 1px solid; BORDER-BOTTOM: #333333 1px solid">
+      <tr bgcolor="#FFFFFF">
+        <td height="19" colspan="2"><div align="center"><img src="http://andrewduncan.co.nz/Images/header.gif" width="800" height="180" alt="Header"/></div>
+        </td>
+      </tr>
+      <tr>
+        <td width="202" height="660" valign="top" bgcolor="#054A82" style="BORDER-RIGHT: #231F20 1px solid; BORDER-TOP: #231F20 1px solid">
+          <div align="left"></div>
+          <div align="left">
+            <table border="0" cellpadding="0" cellspacing="0" width="200">
+              <!-- fwtable fwsrc="menu.png" fwbase="menu.gif" fwstyle="Dreamweaver" fwdocid = "742308039" fwnested="0" -->
+              <tr>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="200" height="1" border="0"/></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="1" border="0"/></td>
+              </tr>
+              <tr>
+                <td><img name="menu_r1_c1" src="http://andrewduncan.co.nz/Images/images/menu_r1_c1.gif" width="200" height="27" border="0" alt=""/></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="27" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="<%= user_page_path(@user, 'home_page') -%>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r2_c1','','http://andrewduncan.co.nz/Images/images/menu_r2_c1_f2.gif',1);"><img name="menu_r2_c1" src="http://andrewduncan.co.nz/Images/images/menu_r2_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="<%= user_page_path(@user, 'report_order') -%>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r3_c1','','http://andrewduncan.co.nz/Images/images/menu_r3_c1_f2.gif',1);"><img name="menu_r3_c1" src="http://andrewduncan.co.nz/Images/images/menu_r3_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="<%= user_properties_path(@user) -%>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r4_c1','','http://andrewduncan.co.nz/Images/images/menu_r4_c1_f2.gif',1);"><img name="menu_r4_c1" src="http://andrewduncan.co.nz/Images/images/menu_r4_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="sales.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r5_c1','','http://andrewduncan.co.nz/Images/images/menu_r5_c1_f2.gif',1);"><img name="menu_r5_c1" src="http://andrewduncan.co.nz/Images/images/menu_r5_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="<%= user_page_path(@user, 'sellers') -%>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r6_c1','','http://andrewduncan.co.nz/Images/images/menu_r6_c1_f2.gif',1);"><img name="menu_r6_c1" src="http://andrewduncan.co.nz/Images/images/menu_r6_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="<%= user_page_path(@user, 'testimonials') -%>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r7_c1','','http://andrewduncan.co.nz/Images/images/menu_r7_c1_f2.gif',1);"><img name="menu_r7_c1" src="http://andrewduncan.co.nz/Images/images/menu_r7_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="<%= user_page_path(@user, 'about') -%>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r8_c1','','http://andrewduncan.co.nz/Images/images/menu_r8_c1_f2.gif',1);"><img name="menu_r8_c1" src="http://andrewduncan.co.nz/Images/images/menu_r8_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="<%= user_page_path(@user, 'buyers') -%>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r9_c1','','http://andrewduncan.co.nz/Images/images/menu_r9_c1_f2.gif',1);"><img name="menu_r9_c1" src="http://andrewduncan.co.nz/Images/images/menu_r9_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="<%= user_page_path(@user, 'newsletter') -%>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r10_c1','','http://andrewduncan.co.nz/Images/images/menu_r10_c1_f2.gif',1);"><img name="menu_r10_c1" src="http://andrewduncan.co.nz/Images/images/menu_r10_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="<%= user_page_path(@user, 'helpful-links') -%>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r11_c1','','http://andrewduncan.co.nz/Images/images/menu_r11_c1_f2.gif',1);"><img name="menu_r11_c1" src="http://andrewduncan.co.nz/Images/images/menu_r11_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td><a href="<%= user_page_path(@user, 'contact') -%>" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menu_r12_c1','','http://andrewduncan.co.nz/Images/images/menu_r12_c1_f2.gif',1);"><img name="menu_r12_c1" src="http://andrewduncan.co.nz/Images/images/menu_r12_c1.gif" width="200" height="35" border="0" alt=""/></a></td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="35" border="0"/></td>
+              </tr>
+              <tr>
+                <td>
+                  <div align="center">
+                    <font color="white">
+                      <%= @user.name -%><br/>
+                      <%= @user.tag_line -%> <br/>
+                    </font>
+                  </div>
+                </td>
+                <td><img src="http://andrewduncan.co.nz/Images/images/spacer.gif" alt="" name="undefined_2" width="1" height="158" border="0"/></td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td width="598" valign="top" style="BORDER-TOP: #231F20 1px solid;"><table width="591" border="0" align="left" cellpadding="6" cellspacing="6">
+
+         <%= yield %>
+
+            <tr>
+              <td height="181" valign="top"><hr/>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="62%" height="148"><p><font color="#000000">Contact Details:<br/>
+                          <br/>
+                          <strong><%= @user.name -%><br/>
+                          </strong><%= @user.tag_line -%><strong><br/>
+                          </strong><%= @user.company -%><br/>
+                          <br/>
+                          Telephone <%= @user.phone_work -%><br/>
+                          Mobile <%= @user.phone_mobile -%><br/>
+                          Email: <a href="mailto:<%= @user.email -%>">click here</a><br/>
+                          <br/>
+                          149 Johnsonville Road, Wellington</font></p>
+                    </td>
+                    <td width="38%"><div align="center"><font color="#000000"><img src="http://andrewduncan.co.nz/Images/harcourts_logo.gif" width="154" height="62" alt="logo"/></font></div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <div align="left"></div>
+        </td>
+      </tr>
+    </table>
+  </div> 
+
+</body>
+</html>

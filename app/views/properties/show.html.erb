@@ -1,0 +1,5 @@
+<% if @user.theme && @user.theme.property_show %>
+  <%= render :inline => @user.theme.property_show, :locals => {:user => @user, :property => @property} -%>
+<% else %>
+  <%= render :partial => 'properties/detail', :locals => {:user => @user, :property => @property} %>
+<% end %>

@@ -1,0 +1,52 @@
+==Weblink Project
+Alister Christie:
+  alister@salespartner.co.nz
+  0272 68 44 28
+Nahum Wild:
+  nahum.wild@gmail.com
+  021 677 808
+
+Notes for this project
+
+thin -p 8080 start
+mongrel_rails start
+
+Required Gems
+paperclip
+dragonfly
+authlogic
+sqlite3-ruby
+uuid
+rmagick
+thin or mongrel
+nokogiri  *XML HTML SAX Reader / Parser
+rack-cache
+pony
+tiny_mce
+
+
+http://localhost:8080/admin/properties
+
+from the source directory
+Capistrano deployment
+cap deploy tag=HEAD target=stage
+cap unicorn:start target=prod
+the 'start' about can be substituted for 'stop' and 'restart' as required.
+
+
+Server:
+alisterchristie
+Blu3LightSpecial
+
+
+ip address
+
+173.203.86.167
+
+root = thedoglayinfrontoftheheater
+c4padmin = peopleringingwithsupportproblems
+deploy = listenedwhilethebabyscreamed
+
+db master = linkeastonesinkingondown
+db deploy = yousawtheworldonastage
+

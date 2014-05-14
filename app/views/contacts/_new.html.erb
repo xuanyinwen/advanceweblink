@@ -1,0 +1,46 @@
+<span id='contact_form'>
+  <%- form_remote_tag :url => user_contacts_path(@user) do |f| -%>
+
+    <table width="525" border="0" cellspacing="4" cellpadding="4">
+      <tr valign="top">
+        <td width="204"><font color="#000000">Your Name</font></td>
+        <td width="300"><font color="#000000">
+          <%= text_field_tag 'contact[name]', '', :size => 25, :maxlength => 100 %>
+        </font></td>
+      </tr>
+      <tr valign="top">
+        <td><font color="#000000">Phone Number<br>
+        </font></td>
+        <td><font color="#000000">
+          <%= text_field_tag 'contact[phone_number]', '', :size => 25, :maxlength => 100 %>
+        </font></td>
+      </tr>
+      <tr valign="top">
+        <td><font color="#000000">Email Address</font></td>
+        <td><font color="#000000">
+          <%= text_field_tag 'contact[email]', '', :size => 25, :maxlength => 100 %>
+        </font></td>
+      </tr>
+      <tr valign="top">
+        <td height="86"><font color="#000000">Question / Comment</font></td>
+        <td><font color="#000000">
+          <%= text_area_tag 'contact[question]', '', :rows => 5, :cols => 30 %>
+        </font></td>
+      </tr>
+      <tr valign="top">
+        <td height="34"><font color="#000000">Would you like to receive a weekly update of
+          new listings by email?</font></td>
+        <td><font color="#000000">
+          <%= check_box_tag 'contact[weekly_update]' %>
+          </font></td>
+      </tr>
+      <tr valign="top">
+        <td>&nbsp;</td>
+        <td><font color="#000000">
+          <%= submit_tag "Send" %>
+        </font></td>
+      </tr>
+    </table>
+
+  <% end %>
+</span>

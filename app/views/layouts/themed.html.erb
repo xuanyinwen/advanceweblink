@@ -1,0 +1,5 @@
+<% if @user.theme %>
+  <%= render :inline => @user.theme.content -%>
+<% else %>
+  <%= render :partial => 'common/default_theme' -%>
+<% end %>

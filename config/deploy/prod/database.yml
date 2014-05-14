@@ -1,0 +1,6 @@
+production:
+  adapter: mysql
+  database: weblink_prod
+  username: deploy
+  password: yousawtheworldonastage
+  host: 127.0.0.1

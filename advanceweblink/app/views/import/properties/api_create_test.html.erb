@@ -1,0 +1,5 @@
+<% form_for @listing_group_data, :url => api_create_import_properties_path(params[:guid]), :html => { :multipart => true, :method => :post} do |f| %>
+  <%= f.file_field :data %>
+  <br />
+  <%= f.submit "Upload" %>
+<% end %>
