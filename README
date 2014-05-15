@@ -1,6 +1,12 @@
 ==Weblink Project
+<<<<<<< HEAD
 Alister Christie:
   Notes for this project
+=======
+
+
+Notes for this project
+>>>>>>> eb926283f0d50de344c9dcd2cf41e9a8aa9408e1
 
 thin -p 8080 start
 mongrel_rails start
