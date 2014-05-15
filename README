@@ -1,12 +1,6 @@
 ==Weblink Project
 Alister Christie:
-  alister@salespartner.co.nz
-  0272 68 44 28
-Nahum Wild:
-  nahum.wild@gmail.com
-  021 677 808
-
-Notes for this project
+  Notes for this project
 
 thin -p 8080 start
 mongrel_rails start
